@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prosty slider</title>
+    <meta name="description" content="Prosty slider" />
+    <meta name="keywords" content="..." />
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    
+    <main class="slider">
+      <section class="slider__container invisable">
+        <button
+          class="slider_button slider_button--prev"
+          data-button-prev
+        ></button>
+        <figure class="slide" data-slide onclick="hideSlide()"></figure>
+        <button
+          class="slider_button slider_button--next"
+          data-button-next
+        ></button>
+        <button 
+          class="slider_button slider_button--x"
+        onclick="hideSlide()">X</button>
+      </section>
+
+      <article>
+
+
+        <div class="container" style="max-width: 1000px; text-align: center;  margin-bottom: 50px;">
+          <h2 style="margin-top: 50px; margin-bottom: 30px; font-weight: bold; font-size: 38px;">Moja praca</h2>
+    
+          <div class="row">
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()"> 
+                <a data-title="Strona1"><img
+                    src="img/strona1.jpg" class="img-fluid" alt="strona1"></a>
+                <figcaption>Strona 1</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-title="Strona2"><img
+                    src="img/strona2.png" class="img-fluid" alt="strona2"></a>
+                <figcaption>Strona 2</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona3"><img
+                    src="img/strona3.png" class="img-fluid" alt="strona3"></a>
+                <figcaption>Strona 3</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona4"><img
+                    src="img/strona4.png" class="img-fluid" alt="strona4"></a>
+                <figcaption>Strona 4</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona5"><img
+                    src="img/strona5.png" class="img-fluid" alt="strona5"></a>
+                <figcaption>Strona 5</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona6"><img
+                    src="img/strona6.png" class="img-fluid" alt="strona6"></a>
+                <figcaption>Strona 6</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona7"><img
+                    src="img/strona7.png" class="img-fluid" alt="strona7"></a>
+                <figcaption>Strona 7</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona8"><img
+                    src="img/strona8.png" class="img-fluid" alt="strona8"></a>
+                <figcaption>Strona 8</figcaption>
+              </figure>
+    
+            </div>
+    
+            <div class="col-sm-6  col-md-6 col-lg-4">
+    
+              <figure class="strona image" onclick="showSlide()">
+                <a data-lightbox="galeria" data-title="Strona9"><img
+                    src="img/strona9.png" class="img-fluid" alt="strona9"></a>
+                <figcaption>Strona 9</figcaption>
+              </figure>
+    
+            </div>
+          </div>
+        </main>
+      </article>
+   
+
+    <script src="index.js"></script>
+    <script>
+      const imageArr = [
+        "./img/strona1.jpg",
+        "./img/strona2.png",
+        "./img/strona3.png",
+        "./img/strona4.png",
+        "./img/strona5.png",
+        "./img/strona6.png",
+        "./img/strona7.png",
+        "./img/strona8.png",
+        "./img/strona9.png",
+      ];
+      const slider = new Slider(imageArr);
+      slider.initializeSlider();
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
+  </body>
+</html>

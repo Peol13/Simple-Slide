@@ -1,0 +1,150 @@
+*,
+*::after *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+  background-color: rgb(45, 63, 63);
+  font-family: "Lato", sans-serif;
+}
+
+a:link {
+  color: #209781;
+  text-decoration: none;
+}
+a:visited {
+  color: #209781;
+}
+a:active {
+  color: #209781;
+}
+a:link {
+  color: #209781;
+  text-decoration: none;
+}
+a:visited {
+  color: #209781;
+}
+a:active {
+  color: #209781;
+}
+a:hover {
+  color: #e9b64a;
+  z-index: 0.1;
+  
+}
+         /*SLIDER*/
+.slider {
+  width: 99vw;
+  height: 110vh;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+   
+}
+
+.slider__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+	
+  background-color: rgba(45, 63, 63, 0.6);
+}
+
+.invisable {
+  display: none;
+}
+.slider_button {
+  outline: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #41b883;
+  color: #fff;
+  border: none;
+  position: absolute;
+  transition: background-color 0.1s ease-in;
+}
+
+.slider_button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+.slider_button:hover {
+  background-color: #36634f;
+}
+.slider_button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #fff;
+  border-bottom: 0;
+  border-right: 0;
+  height: 20px;
+  width: 20px;
+}
+.slider_button--prev {
+  position: relative;
+  left: 50px;
+}
+.slider_button--prev::before {
+  transform: translate(90%, 70%) rotate(-45deg);
+}
+.slider_button--next {
+  position: relative;
+  right: 50px;
+}
+.slider_button--x {
+  position: relative;
+  right: 100px;
+  top: -326px;
+  font-size: 24px;
+}
+.slider_button--x::before {
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+.slider_button--next::before {
+  transform: translate(50%, 70%) rotate(135deg);
+}
+.slide__image {
+  height: 1000px;
+  max-width: 1000px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 50px;
+
+}
+.slide__caption {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  
+}
+
+/* GALERIA */
+
+figure img {
+  max-width: 350px;
+  max-height: 700px;
+}
+.strona img {
+  transition: transform 1s ease-in-out;
+}
+
+.image:hover{
+  opacity: 0.6;
+}
