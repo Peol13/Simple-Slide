@@ -1,1 +1,2 @@
-# Simple-Slide Jest to prosty slider wykonany przy pomocy klasy. Możesz użyć tego kodu w swiom projekcie. 
+# Simple-Slide Prosty slider wykonany przy pomocy klasy w JavaScript. Możesz użyć tego kodu w swiom projekcie.
+
